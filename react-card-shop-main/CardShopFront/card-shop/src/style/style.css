@@ -1,0 +1,514 @@
+* {
+  margin: 0 auto;
+  box-sizing: border-box;     
+}
+
+.Main {
+  width: 100%;
+  height: 100vh;
+}
+
+
+
+.headerBar{
+  width: 100%;
+  height: 8%;
+  background-color: #012169;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerBar input {
+  width: 10%;
+  height: 100%;
+  margin-right: 20px;
+}
+
+
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.mainDiv{
+  width: 100%;
+  padding: 1%;
+}
+
+.mainDiv, .cardHolder, .sellerRow, .windowForm, .adminWindowForm, .windowContent{
+  animation: fadeIn 1s;
+}
+
+.adminWindowForm, .itemWindowForm{
+  z-index: 100001;
+}
+
+.lds-ring{
+  z-index: 100002;
+}
+
+
+.shoppingCart{
+  width: 74%;
+}
+
+.receipt{
+  width: 24%;
+  margin: 0% 1%;
+  border-radius: 10px;
+  border: 2px solid #012169;
+  background-color: rgba(0, 0, 0, 0.05);
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.headerBar a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.headerImage{
+  width: 10%;
+  height: 100%;
+  display: block;
+  float: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(./logo.png);
+}
+
+
+td, th{
+  text-align: left;
+  border-width: 1px 0px;
+  border-color: lightgray;
+  border-style: solid;
+  padding: 0px 4px;;
+}
+
+th{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+table{
+  border-collapse: collapse;
+}
+
+.cardHolder, .statsHolder, .shoppingCart, .receipt{
+  float: left;
+  padding: 2%;
+}
+
+.cardHolder{
+  width: calc(100%/3);
+  text-align: center;
+}
+
+
+.cardHolder h1, .cardHolder a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #012169;
+}
+
+.sellerRow{
+  float: left;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+}
+
+.sellerRow span{
+  width: 20%;
+}
+
+.shoppingCart td {
+  width: calc(100% / 5)
+}
+
+.statsHolder{
+  margin-top: 10px;
+  width: calc((100%/3) * 2);
+}
+
+.changeButton, .submitButton{
+  display: inline;
+  text-align: center;
+  background-color: unset;
+  height: 100%;
+  width: 5%;
+  padding: 5px;
+  border: unset;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.changeButton:hover, .submitButton:hover{
+  opacity: 0.8;
+}
+
+.submitButton{
+  background-image: url(./magnifying-glass-solid.png);
+}
+
+.inputSearch{
+  width: 90%;
+  display: inline;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: unset;
+}
+
+.windowSearchBar{
+  height: 10%;
+  width: 80%;
+}
+
+.windowSearchBar .submitButton{
+  width: 5%;
+  margin: 0 calc(5%/4);
+}
+
+.windowInputSearch {
+  width: 80%;
+  height: 100%;
+  display: inline;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: unset;
+}
+
+.greyoutOverlay{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemWindowForm, .adminWindowForm{
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.itemWindowForm{
+  width: 50%;
+  height: 50vh;
+}
+
+.adminWindowForm{
+  width: 80%;
+  height: 80vh;
+}
+
+.windowHeader{
+  width: 100%;
+  height: 10%;
+}
+
+.windowHeader h2{
+  display: inline;
+}
+
+.windowContent{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.windowTabButton{
+  border: unset;
+  background-color: unset;
+  font-size: 20px;
+}
+
+.windowTabButton:hover{
+  color: #000000 !important;
+}
+
+.adminGrid{
+  height: 90%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.windowContent table{
+  width: 90%;
+}
+
+
+
+.windowContent form{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2%
+}
+
+.windowSearchBar form{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2%
+}
+
+
+.cancelWindowButton{
+  float: right;
+  border-radius: 4px;
+  background-color: unset;
+}
+
+.cancelWindowButton:hover{
+  background-color: rgba(0,0,0,0.1);
+}
+
+input{
+  width: 100%;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+form span{
+  width: 100%;
+}
+
+.regularForm{
+  width: 50%;
+  }
+
+.loginRegister{
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.profileButtons{
+  margin-top: 10vh;
+  width: 100%;
+  text-align: center;
+}
+
+.profileButtons button{
+  margin: 0% 1%;
+}
+
+.mobileMenu{
+  background-color: #012169;
+  transition: height 1s;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+/* https://loading.io/css/ */
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 700px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+@media screen and (max-width: 800px) {
+
+  .mainDiv{
+    width: 100%;
+    padding: 6%
+  }
+
+  .headerLinks{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+  }
+
+  .headerLinks a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  .cardHolder, .regularForm, .statsHolder{
+    width: 100%;
+  }
+
+  .headerImage{
+    width: 60%
+  }
+
+  .itemWindowForm{
+    width: 90%;
+    height: 80vh;
+  }
+  
+  .windowTabButton{
+    font-size: 10px;
+  }
+
+  .receipt{
+    width: 100%;
+    height: 20vh;
+    margin-bottom: 20px;
+  }
+
+  .shoppingCart{
+    width: 100%;
+  }
+  
+  
+  
+}
